@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO de base -->
+        <title>Collège Jean Piaget 1 | Établissement privé d'excellence au Bénin</title>
+        <meta name="description" content="Le Collège Jean Piaget 1 accompagne les élèves de la 6e à la Terminale. Une pédagogie axée sur la rigueur, la discipline et la construction de l'intelligence.">
+        
+        <!-- Open Graph / WhatsApp / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="[URL_DU_SITE_A_CONFIRMER]">
+        <meta property="og:title" content="Collège Jean Piaget 1 - Inscriptions ouvertes">
+        <meta property="og:description" content="Découvrez notre établissement privé de référence de la 6e à la Terminale. On ne comprend que ce que l'on construit.">
+        <meta property="og:image" content="[IMAGE_PARTAGE_1200x630.jpg]">
+        <meta property="og:locale" content="fr_FR">
+
+        <!-- Favicon (l'icône dans l'onglet du navigateur) -->
+        <link rel="icon" type="image/png" href="[FAVICON_32x32.png]">
+        <link rel="apple-touch-icon" href="[FAVICON_180x180.png]">
+
+        <!-- Polices et Styles -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+        
+        <!-- Leaflet.js (Carte interactive) -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
+        <!-- Three.js (Animation 3D) chargée en différé -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        <div class="progress-bar" id="progressBar"></div>
+
+        <header class="site-header" id="siteHeader">
+            <div class="wrap header-inner">
+                <a href="#top" class="logo">
+                    <span class="logo-mark">JP</span>
+                    <span class="logo-text">Collège<br>Jean Piaget</span>
+                </a>
+                <nav class="main-nav" id="mainNav">
+                    <a href="#etapes">Les 7 années</a>
+                    <a href="#vie-scolaire">Vie scolaire</a>
+                    <a href="#galerie">Galerie</a>
+                    <a href="#History">A propos de nous</a>
+                    <a href="#frais">Frais de scolarité</a>
+                    <a href="#resultats">Résultats aux examens</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+                
+                <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </header>
+        <main id="top">
+              <!-- HERO -->
+            <section class="hero">
+                <!-- Canvas 3D (Z-index 0) -->
+              <canvas id="hero-canvas" class="hero-canvas" aria-hidden="true"></canvas>
+                <div class="wrap hero-inner">
+                    <p class="eyebrow" data-reveal>Établissement privé — 6e - Tle</p>
+                    <h1 data-reveal>On ne comprend<br>que ce que l'on <em>construit</em>.</h1>
+                    <p class="hero-lede" data-reveal> Le Collège Jean Piaget accompagne +620 élèves de la 6e à la Tle,
+                    avec une conviction simple : l'élève apprend en agissant,
+                    en se trompant, en recommençant.</p>
+                    <div class="hero-actions" data-reveal>
+                    <a href="#etapes" class="btn btn-primary">Découvrir l'établissement</a>
+                    <a href="#contact" class="btn btn-ghost">Prendre rendez-vous</a>
+                    </div>
+                </div>
+
+                    <div class="blocks" aria-hidden="true">
+                    <div class="block b1"><span>6e</span></div>
+                    <div class="block b2"><span>5e</span></div>
+                    <div class="block b3"><span>4e</span></div>
+                    <div class="block b4"><span>3e</span></div>
+                    <div class="block b5"><span>2e</span></div>
+                    <div class="block b6"><span>1e</span></div>
+                    <div class="block b7"><span>Tle</span></div>
+                </div>
+            </section>
+
+            <!-- QUOTE -->
+            <section class="quote-band">
+                <div class="wrap">
+                    <p class="quote" data-reveal> « L'intelligence, c'est ce que l'on utilise quand on ne sait pas quoi faire. »</p>
+                    <p class="quote-cite" data-reveal>— Jean Piaget, psychologue et épistémologue</p>
+                </div>
+            </section>
+
+            <!-- 7 ÉTAPES -->
+            <section class="etapes" id="etapes">
+                <div class="wrap">
+                    <p class="eyebrow" data-reveal>Le parcours</p>
+                    <h2 data-reveal>Sept années, Sept marches</h2>
+                    <p class="section-lede" data-reveal>Chaque niveau ajoute une couche de méthode et d'autonomie comme on empile des blocs, pas comme on remplit un tiroir.</p>
+
+                    <p class="cycle-label" data-reveal>Cycle collège</p>
+                    <ol class="staircase">
+                        <li class="step" data-reveal>
+                            <span class="step-label">6e</span>
+                            <h3>S'installer</h3>
+                            <p>Découverte du collège, méthodes de travail, premiers repères entre les matières.</p>
+                        </li>
+                        <li class="step" data-reveal>
+                            <span class="step-label">5e</span>
+                            <h3>Expérimenter</h3>
+                            <p>Sciences, langues, projets en petits groupes : on teste, on observe, on ajuste.</p>
+                        </li>
+                        <li class="step" data-reveal>
+                            <span class="step-label">4e</span>
+                            <h3>Raisonner</h3>
+                            <p>Argumentation, résolution de problèmes, premiers choix d'options.</p>
+                        </li>
+                        <li class="step" data-reveal>
+                            <span class="step-label">3e</span>
+                            <h3>Se projeter</h3>
+                            <p>Préparation du brevet, orientation, stage d'observation en entreprise.</p>
+                        </li>
+                    </ol>
+                    <p class="cycle-label" data-reveal>Cycle Lycée</p>
+                    <ol class="staircase staicase-lycée">
+                        <li class="step" data-reveal>
+                            <span class="step-label">2e</span>
+                            <h3>Se projeter</h3>
+                            <p>Préparation du brevet, orientation, stage d'observation en entreprise.</p>
+                        </li>
+                        <li class="step" data-reveal>
+                            <span class="step-label">1e</span>
+                            <h3>Se projeter</h3>
+                            <p>Préparation du brevet, orientation, stage d'observation en entreprise.</p>
+                        </li>
+                        <li class="step" data-reveal>
+                            <span class="step-label">Tle</span>
+                            <h3>Se projeter</h3>
+                            <p>Préparation du baccalauréat, orientation, stage d'observation en entreprise.</p>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+
+  <!-- VIE SCOLAIRE -->
+            <section class="vie-scolaire" id="vie-scolaire">
+                <div class="wrap">
+                    <p class="eyebrow" data-reveal>En dehors des cours</p>
+                    <h2 data-reveal>La vie au collège</h2>
+
+                    <div class="cards-grid" id="activities-grid">
+                        <!-- Les cartes d'activités seront injectées ici par JavaScript -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- GALERIE — photos et vidéos à compléter -->
+            <section class="galerie" id="galerie">
+                <div class="wrap">
+                    <p class="eyebrow" data-reveal>En images</p>
+                    <h2 data-reveal>Galerie</h2>
+                    <p class="section-lede" data-reveal>Photos d'événements et vidéo de présentation de l'établissement.</p>
+
+                    <div class="galerie-grid">
+                        <div class="placeholder placeholder-photo" data-reveal>
+                            <span class="placeholder-icon">📷</span>
+                            <span>Photo à ajouter</span>
+                        </div>
+                        <div class="placeholder placeholder-photo" data-reveal>
+                            <span class="placeholder-icon">📷</span>
+                            <span>Photo à ajouter</span>
+                        </div>
+                        <div class="placeholder placeholder-photo" data-reveal>
+                            <span class="placeholder-icon">📷</span>
+                            <span>Photo à ajouter</span>
+                        </div>
+                        <div class="placeholder placeholder-video" data-reveal>
+                            <span class="placeholder-icon">🎬</span>
+                            <span>Vidéo de présentation à ajouter</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- A PROPOS / HISTOIRE -->
+            <section class="quote-band" id="History">
+                <div class="wrap">
+                   <div class="grand-titre" data-reveal>
+                        <h2><em>Née en <span id="data-foundation-year"></span>, l'école <span class="accent-vert">Jean Piaget 1</span> est une véritable référence dans le domaine de l'éducation. Formant une gamme variée de jeunes talents, elle participe activement à leur éclosion et à leur émancipation, tant sur le plan scolaire, intellectuel que sur le plan émotionnel.</em></h2>
+                    </div>
+                    <div class="Bloc-de-texte" data-reveal>
+                        <div class="placeholder placeholder-photo placeholder-dark">
+                            <span class="placeholder-icon">📷</span>
+                            <span>Photo du siège / de l'annexe</span>
+                        </div>
+                        <div>
+                            <p>
+                                Notre complexe comprend deux principales structures, un siège et une annexe à moins de 100 mètres l'une de l'autre.
+                                Le siège comprend 3 étages et abrite les bureaux du directeur, des secrétaires, des préfets de discipline et des préfets d'étude.
+                                À noter qu'à l'annexe aussi, on a un préfet d'étude et un autre de discipline. Des routines régulières sont organisées par le directeur afin de garantir la discipline à l'annexe.
+                            </p>
+                            <p>
+                                Afin de promouvoir l'excellence, qui est notre marque depuis quelques années, une note minimale de 12/20 est exigée. Lorsque cette condition n'est pas respectée, l'élève a l'obligation de faire signer la copie
+                                par un de ses parents ou tuteurs. Lorsque ceci n'est pas réalisé dans un délai de 2 jours, l'enfant est discipliné puis renvoyé chez lui pour convoquer ses parents.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Frise chronologique (Histoire) -->
+                    <div class="timeline" id="history-timeline">
+                        <!-- Les étapes seront injectées ici par JavaScript -->
+                    </div>
+                </div>
+            </section>
+<!-- ÉQUIPE DIRIGEANTE -->
+            <section class="equipe" id="equipe">
+                <div class="wrap">
+                    <p class="eyebrow" data-reveal>Notre encadrement</p>
+                    <h2 data-reveal>L'équipe dirigeante</h2>
+                    <p class="section-lede" data-reveal>Une administration dévouée pour garantir un cadre d'apprentissage rigoureux et bienveillant pour chaque élève.</p>
+
+                    <!-- Citation du directeur sur fond clair -->
+                    <blockquote class="director-quote" data-reveal>
+                        <p id="data-director-quote"></p>
+                        <cite id="data-director-name"></cite>
+                    </blockquote>
+
+                    <!-- Grille de l'équipe -->
+                    <div class="cards-grid team-grid" id="team-grid">
+                        <!-- Les cartes membres de l'équipe seront injectées ici par JavaScript -->
+                    </div>
+                </div>
+            </section>
+  <!-- CHIFFRES -->
+            <section class="chiffres" >
+                <div class="wrap">
+                    <p class="eyebrow" data-reveal>En quelques chiffres</p>
+                    <h2 data-reveal>Ce que ça donne, concrètement</h2>
+
+                    <div class="stats-grid">
+                        <div class="stat" data-reveal>
+                            <span class="stat-number" data-count="620">620</span>
+                            <span class="stat-label">élèves</span>
+                        </div>
+                        <div class="stat" data-reveal>
+                            <span class="stat-number" data-count="42">42</span>
+                            <span class="stat-label">professeurs</span>
+                        </div>
+                        <div class="stat" data-reveal>
+                            <span class="stat-number" data-count="96" data-suffix="%">96%</span>
+                            <span class="stat-label">de réussite au brevet</span>
+                        </div>
+                        <div class="stat" data-reveal>
+                            <span class="stat-number" data-count="98" data-suffix="%">98%</span>
+                            <span class="stat-label">de réussite au baccalauréat</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FRAIS DE SCOLARITÉ -->
+            <section class="frais" id="frais">
+                <div class="wrap">
+                    <p class="eyebrow" data-reveal>Scolarité</p>
+                    <h2 data-reveal>Frais de scolarité</h2>
+                    <p class="section-lede" data-reveal>
+                        Tarifs annuels indicatifs par niveau, hors restauration et sorties pédagogiques.
+                    </p>
+
+                    <div class="fees-grid">
+                        <div class="fees-card" data-reveal>
+                            <p class="cycle-label">Cycle collège</p>
+                            <ul class="fees-list" id="fees-college">
+                                <!-- Tarifs collège injectés par JS -->
+                            </ul>
+                        </div>
+                        <div class="fees-card" data-reveal>
+                            <p class="cycle-label">Cycle lycée</p>
+                            <ul class="fees-list" id="fees-lycee">
+                                <!-- Tarifs lycée injectés par JS -->
+                            </ul>
+                        </div>
+                    </div>
+
+                        <p class="fees-note" data-reveal>
+                        + 150 € de frais d'inscription (une seule fois, à l'entrée dans l'établissement). Des frais de réinscription peuvent être demandés chaque année.
+                        Facilités de paiement en 3 ou 4 fois sur demande auprès du secrétariat.
+                        </p>
+
+                    <div class="pro-section-wrapper" data-reveal>
+                        <div class="pro-preview">
+                            <div class="pro-preview-lines">
+                                <span style="width: 40%; background: var(--primary);"></span>
+                                <span style="width: 100%;"></span>
+                                <span style="width: 80%;"></span>
+                                <span style="width: 90%;"></span>
+                            </div>
+                        </div>
+                        <div class="pro-download-btn">
+                            <p style="font-size: 0.9rem; color: var(--muted);">Pour plus d'information sur le processus d'écolage par tranche, téléchargez le document ci-dessous :</p>
+                            <a href="#" download>
+                        📥 Télécharger le prospectus (PDF)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+                <!-- RÉSULTATS AUX EXAMENS -->
+            <section class="resultats" id="resultats">
+                <div class="wrap">
+                    <p class="eyebrow" data-reveal>Résultats</p>
+                    <h2 data-reveal>Résultats aux examens</h2>
+                    <p class="section-lede" data-reveal>
+                    Taux de réussite au brevet et au baccalauréat sur les quatre dernières sessions.
+                    </p>
+
+                    <div class="exam-chart" data-reveal>
+                    <div class="exam-legend">
+                        <span class="legend-item"><i class="dot dot-brevet"></i>Brevet</span>
+                        <span class="legend-item"><i class="dot dot-bac"></i>Baccalauréat</span>
+                    </div>
+
+                    <div class="exam-bars">
+                        <div class="exam-year">
+                        <div class="bar-pair">
+                            <div class="bar bar-brevet" style="--value:91"><span class="bar-value">91%</span></div>
+                            <div class="bar bar-bac" style="--value:93"><span class="bar-value">93%</span></div>
+                        </div>
+                        <span class="year-label">2022</span>
+                        </div>
+                        <div class="exam-year">
+                        <div class="bar-pair">
+                            <div class="bar bar-brevet" style="--value:93"><span class="bar-value">93%</span></div>
+                            <div class="bar bar-bac" style="--value:95"><span class="bar-value">95%</span></div>
+                        </div>
+                        <span class="year-label">2023</span>
+                        </div>
+                        <div class="exam-year">
+                        <div class="bar-pair">
+                            <div class="bar bar-brevet" style="--value:95"><span class="bar-value">95%</span></div>
+                            <div class="bar bar-bac" style="--value:96"><span class="bar-value">96%</span></div>
+                        </div>
+                        <span class="year-label">2024</span>
+                        </div>
+                        <div class="exam-year">
+                        <div class="bar-pair">
+                            <div class="bar bar-brevet" style="--value:96"><span class="bar-value">96%</span></div>
+                            <div class="bar bar-bac" style="--value:98"><span class="bar-value">98%</span></div>
+                        </div>
+                        <span class="year-label">2025</span>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </section>
+<!-- TÉMOIGNAGES -->
+            <section class="temoignages" id="temoignages">
+                <div class="wrap">
+                    <p class="eyebrow" data-reveal>Ils nous font confiance</p>
+                    <h2 data-reveal>Paroles de parents et d'élèves</h2>
+                    
+                    <div class="carousel-wrapper" data-reveal>
+                        <button class="carousel-btn prev" aria-label="Témoignage précédent" id="testi-prev">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                        </button>
+                        
+                        <div class="carousel-track" id="testimonials-track">
+                            <!-- Les cartes témoignages seront injectées ici par JavaScript -->
+                        </div>
+                        
+                        <button class="carousel-btn next" aria-label="Témoignage suivant" id="testi-next">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                        </button>
+                    </div>
+                </div>
+            </section>
+  <!-- FAQ -->
+            <section class="faq" id="faq">
+                <div class="wrap">
+                    <p class="eyebrow" data-reveal>Foire aux questions</p>
+                    <h2 data-reveal>Questions fréquentes</h2>
+                    
+                    <div class="faq-list" id="faq-list" data-reveal>
+                        <!-- Les questions (éléments details) seront injectées ici par JavaScript -->
+                    </div>
+                </div>
+            </section>          
+ <!-- CONTACT -->
+            <section class="contact" id="contact">
+                <div class="wrap contact-inner">
+                    <div class="contact-info" data-reveal>
+                        <p class="eyebrow">Nous contacter</p>
+                        <h2>Une question, une visite&nbsp;?</h2>
+                        <p class="section-lede">Le secrétariat répond du lundi au vendredi, de 8h à 17h. Les visites de l'établissement se font sur rendez-vous.</p>
+                        <ul class="contact-list">
+                            <li><strong>Adresse Siège</strong> <span id="data-address-seat"></span></li>
+                            <li><strong>Adresse Annexe</strong> <span id="data-address-annex"></span></li>
+                            <li><strong>Téléphone</strong> <span id="data-phone"></span></li>
+                            <li><strong>Email</strong> <span id="data-email"></span></li>
+                        </ul>
+                    </div>
+                        <!-- Conteneur de la carte interactive Leaflet -->
+                    <div id="contact-map" class="contact-map-container" aria-label="Carte des implantations du collège"></div>
+                     <!-- VOICI LA BALISE QUI MANQUAIT ! -->
+
+                </div>
+            </section>
+        </main>
+        <footer class="site-footer">
+            <div class="wrap footer-inner">
+                <div class="logo">
+                    <span class="logo-mark">JP</span>
+                    <span class="logo-text">Collège<br>Jean Piaget</span>
+                </div>
+                <p class="footer-note">Établissement de renom à Abomey-Calavi et dans le Bénin.</p>
+                <button class="btn btn-ghost back-to-top" id="backToTop">Haut de page ↑</button>
+                <p >Pour contacter les concepteurs du site taper sur  <a href="salifouanbid@gmail.com" class="mail">salifouanbid@gmail.com</a> ou encore  <a href="briancodjia@gmail.com" class="mail">briancodjia@gmail.com</a> </p>
+            </div>
+        </footer>
+
+<script src="script.js"></script>
+    </body>
+</html>
