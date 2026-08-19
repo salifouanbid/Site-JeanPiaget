@@ -313,7 +313,7 @@ window.addEventListener('load', () => {
     if (navigator.connection.saveData === true || ['slow-2g', '2g', '3g'].includes(navigator.connection.effectiveType)) isSlowConnection = true;
   }
 
-  ///if (window.innerWidth <= 768 || window.matchMedia('(prefers-reduced-motion: reduce)').matches || isSlowConnection) return;
+  if (window.innerWidth <= 768 || window.matchMedia('(prefers-reduced-motion: reduce)').matches || isSlowConnection) return;
 
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(45, window.innerWidth / heroSection.offsetHeight, 0.1, 1000);
@@ -375,6 +375,7 @@ if(navToggle && mainNav) {
     const isOpen = mainNav.classList.toggle('open');
     navToggle.classList.toggle('open', isOpen);
     navToggle.setAttribute('aria-expanded', isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
   });
   mainNav.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {

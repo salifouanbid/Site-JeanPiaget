@@ -31,6 +31,7 @@ body{
   background:var(--paper);
   line-height:1.5;
   -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
 }
 
 img{ max-width:100%; display:block; }
@@ -846,7 +847,7 @@ p{ margin:0 0 1em; }
   .staircase, .staicase-lycée{ grid-template-columns:1fr; }
   .step{ border-left:none; border-right:none !important; border-top:1.5px solid var(--line); padding-top:1.6rem !important; }
   .staircase{ border-top:none; }
-  .blocks{ gap:8px; }
+  .blocks{ gap:8px;transform:none; perspective:none; }
   .exam-bars{ gap:1rem; }
   .bar-pair{ height:150px; }
   .bar{ width:20px; }
